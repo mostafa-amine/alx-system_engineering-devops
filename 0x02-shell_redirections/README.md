@@ -12,6 +12,6 @@ echo "Hello World" | tr  [[:lower:]] [[:upper:]]
 ```
 - we can also delete characters using -d option 
 ```shell
-@mostafa-amine ➜ /workspaces/alx-system_engineering-devops (master) $ echo "Hello World" | tr -d o
-Hell Wrld
+echo "Hello World" | tr -d o
+# Hell Wrld
 ```
