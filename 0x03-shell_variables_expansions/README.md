@@ -1,4 +1,37 @@
-# 0x03. Shell, init files, variables and expansions
+## Commands
+### export 
+```bash
+# We can use it to make a variable global 
+export my_var
+# We can also use it to add any path we want to PATH variable
+# Note -> we use : to add a dir
+export PATH="$PATH:/Mydir"
+```
+### dot .
+```bash
+# We use the . command to execute commands from a specified file in the current shell enviroment. It is also lnown as the "source" command.
+# For Example if we want to execute a shell file we use 
+. myfile.sh 
+# Or
+./myfile.sh
+# Or 
+source myfile.sh
+```
+### printf
+```shell
+# We use printf to format our output
+# %d -> prints decimal number
+# %f -> prints a floating-point number
+# %c -> prints a single character
+# %s -> prints string
+# %x -> hexadecimal
+printf "Hello %s \n" "mostafa"
+
+# We can use modifiers to control the output format
+# - %-10s -> left justifies a string with 10 characters
+# - %10d -> right justifies a string with 10 characters
+# - %04d -> pads a decimal integer with leading zeros before him
+```
 
 ## Shell Initialization Files
 ### What are the /etc/profile and the /etc/profile.d directory
@@ -32,6 +65,8 @@ export my_var
 
 # If we want to print all enviroment varibales (global variables) we use the command : 
 printenv
+# If we want to print all local variables and environment variables, and functions.
+declare
 ```
 ### What are the roles of the following reserved variables: HOME, PATH, PS1
 ```bash 
@@ -79,4 +114,8 @@ echo $a + $b = `expr $a + $b`
 # Using $(())
 sum=$(($a + $b))
 ```
-
+### Converts
+- We can also convert like from binary to decimal or from decimal to hexadecimal
+```bash
+echo "obase=li baghine n7awlo liha; $BINARY" | bc
+```
